@@ -9,7 +9,7 @@ The name Intsy comes from the two core components: Intan RHD2132 bioamplifier ch
 
 Please see "Intsy_GettingStarted.pdf" for details instructions on how to set up the Intsy system. Assembly time is typically about 2-4 hrs.  Total cost is about $1400 for the 32 channel system and about $2300 for the 64 channel system.  That means in just half a day you can build your very own high-quality, low-cost, portable bioamplifier system!
 
-Feedback and suggestions are warmly welcomed!
+All feedback and suggestions are warmly welcomed. 
 
 <p align="center">
   <img src="SystemOverview_v1_300dpi.png" width="350"/>
