@@ -7,6 +7,8 @@ Data can be streamed either wirelessly via bluetooth or in wired configuration o
 
 The name Intsy comes from the two core components: Intan RHD2132 bioamplifier chip + Teensy 3.2 microcontroller.
 
+Please see "Intsy_GettingStarted.pdf" for details instructions on how to set up the Intsy system.
+
 Feedback and suggestions are warmly welcomed!
 
 <p align="center">
