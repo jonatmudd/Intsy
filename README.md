@@ -14,3 +14,8 @@ All feedback and suggestions are warmly welcomed.
 <p align="center">
   <img src="SystemOverview_v1_300dpi.png" width="350"/>
 </p>
+
+<p align="center">
+  <img src="SW_Intsy_screenshot.pdf" width="700"/>
+</p>
+
