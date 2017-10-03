@@ -14,8 +14,9 @@ All feedback and suggestions are warmly welcomed.
 <p align="center">
   <img src="SystemOverview_v1_300dpi.png" width="350"/>
 </p>
-
+Above: Intsy hardware architecture and device
 <p align="center">
-  <img src="SW_Intsy_screenshot.pdf" width="700"/>
+  <img src="SW_Intsy_screenshot.png" width="700"/>
 </p>
+Above: Screenshot of Intsy Labview front end to visualize and stream signals in real time.
 
