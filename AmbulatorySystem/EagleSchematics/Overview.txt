@@ -1,0 +1,3 @@
+Here you will find eagle schematics for the ambulatory board. Gerber files are included. Components mount on front and back
+I used 4pcb (Advanced Circuits) to fab my boards.  Seeed studio is another good option I have used before.
+
