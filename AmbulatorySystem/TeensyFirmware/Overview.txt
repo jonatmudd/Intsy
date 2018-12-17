@@ -1,0 +1,2 @@
+Here you will find firmware for Teensy 3.6.  Compile and upload to Teensy 3.6 board using Arduino IDE
+Note: you will also need Bill Greimans' sdfat library before compiling: https://github.com/greiman/SdFat
