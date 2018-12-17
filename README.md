@@ -16,12 +16,14 @@ All feedback and suggestions are warmly welcomed.
 </p>
 Above: Intsy hardware architecture and device
 
+<hr>
+
 <p align="center">
   <img src="IntsyAmbulatoryFrontBack_cropped_new.png" width="700"/>
 </p>
-Above: Intsy v2: accelerometer and SD card logging enable ambulatory applications.
+Above: Intsy v2: accelerometer and SD card logging enable ambulatory applications. The updated module uses an ADXL335 and Teensy 3.6. A 1-cell LiPo battery port with built-in switch powers the module. 
 
-
+<hr>
 
 <p align="center">
   <img src="SW_Intsy_screenshot.png" width="700"/>
