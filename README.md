@@ -1,5 +1,5 @@
 # Intsy
-32/64 channel bioamplifier system
+32/64 channel bioamplifier system, now with accelerometer and on-board SD data logging capability (as of Dec 2018)
 
 Intsy is a new low-cost, open-source, wireless-enabled bioamplifier system.  The system can be configured for 32 or 64 channel operation.  It has been validated for gastrointesinal slow wave recordings and surface EMG. Full details are provided in our <a href =  "http://iopscience.iop.org/article/10.1088/1361-6579/aaad51">recently published peer-reviewed article </a>.
 
