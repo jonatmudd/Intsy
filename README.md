@@ -17,7 +17,7 @@ All feedback and suggestions are warmly welcomed.
 Above: Intsy hardware architecture and device
 
 <p align="center">
-  <img src="IntsyAmbulatoryFrontBack_cropped.png" width="700"/>
+  <img src="IntsyAmbulatoryFrontBack_cropped_new.png" width="700"/>
 </p>
 Above: Intsy v2: accelerometer and SD card logging enable ambulatory applications.
 
