@@ -84,7 +84,7 @@ end
 
 
 if nargin < 5 || isempty(dataformat)
-    dataformat.Nwords = 73;
+    dataformat.Nwords = 74; %JE 15 Dec 2018. Changed from 73 to 74 for last sync bits now implemented in  Teensy firmware
     dataformat.Noffset = 6;
     dataformat.Nchans = 64;
     dataformat.Naccel = 3;
@@ -95,11 +95,13 @@ T_ROLLOVER = 2^32 - 1; % for 32 bit counter = 4294967295
 
 
 %% open binary data file
+fprintf('Opening file: %s\n', fpath)
 fid = fopen(fpath);
 
 Nsamples = inf; %load the entire data file.
 
-ydat2 = fread(fid, [dataformat.Nwords, Nsamples], 'uint16'); %73 words (=146 bytes) written per data chunk
+fprintf('Reading file: %s\n', fpath)
+ydat2 = uint16(fread(fid, [dataformat.Nwords, Nsamples], 'uint16')); %74 words (=148 bytes) written per data chunk
 ydat2(:,1) = []; %First read is always junk, cmd_pipeline offset not established.
 
 %% First 2 words should contain 73 and 78 'I' and 'N' in INTAN for amp A
@@ -109,6 +111,7 @@ iiA = find(ydat2(1,:) ~=73);
 jjA = find(ydat2(2,:) ~=78);
 iiB = find(ydat2(3,:) ~=84);
 jjB = find(ydat2(4,:) ~=65);
+iiSD = find(ydat2(74,:) ~= 22379);
 
 if (~isempty(iiA) | ~isempty(jjA) | ~isempty(iiB) | ~isempty(jjB))
     warndlg('Data sync IN characters are misread at some time points! See errsync output for more info')
@@ -117,6 +120,7 @@ Errsync.iiA = iiA; % amp A
 Errsync.jjA = jjA;
 Errsync.iiB = iiB; % amp B
 Errsync.jjB = jjB;
+Errsync.iiSD = iiSD; %Teensy generated sync bit to check SD card writes.
 
 
 %% Next 2 words form timestamp in high and low byte packet
@@ -132,7 +136,7 @@ timestampRaw = bitor(bitshift(double(ydat2(6,:)), 16 ), double(ydat2(5,:) ));
 %unwrap any clock rollover.  0.99x factor is heuristic, could also occur at
 %a frame misread, but very unlikely.  In any case, user has access to raw
 %timestamps to do what they wish.
-timestamp = unwrap(timestampRaw, 0.99*T_ROLLOVER);
+timestamp = unwrap(timestampRaw, 0.999*T_ROLLOVER);
 
 timestamp = timestamp - timestamp(1);  %shift time origin to 0
 
@@ -158,10 +162,17 @@ data = ydat2((1+dataformat.Noffset):end, :);
 
 [Nsigs, Nsamps] = size(data);
 
-acceldata = data((Nsigs-dataformat.Naccel+1): Nsigs,:); %acceleromter data
+%inform user of recording duration
+Duration.Samps = Nsamps;
+Duration.Sec = Nsamps/FS;
+Duration.Min = Duration.Sec/60;
+Duration.Hrs = Duration.Min/60;
+fprintf(sprintf('Recording Duration: %4d min = %2.1f hr\n', round(Duration.Min), Duration.Hrs));
+
+acceldata = data((Nsigs-dataformat.Naccel): (Nsigs-1), :); %acceleromter data
 
 %scale accelerometer data
-accelvolts = acceldata*(3.3/2^16);  % Teensy is 3.3 volt device reading 16 bits
+accelvolts = double(acceldata)*(3.3/2^16);  % Teensy 3.6 operates as 3.3 volt device reading 16 bits
 
 accelg = (accelvolts-1.65)/0.3; %adxl335 acceleromter datasheet: 1.5V calibrated to be 0g and 1g/300 mV.
 Data.accelg = accelg;
@@ -172,7 +183,7 @@ Data.accelvolts = accelvolts;
 %  http://intantech.com/files/Intan_RHD2000_data_file_formats.pdf
 % which specifies conversion factor
 IntanDataRaw = data(1:dataformat.Nchans, :); %electrical signal data only (last 3 chans are accelerometer)
-scaled_data = (IntanDataRaw - 2^15) * 0.195;
+scaled_data = (double(IntanDataRaw) - 2^15) * 0.195;
 
 tvec = DTmedian*1e-6*[1:size(scaled_data,2)];
 Data.tvec = tvec;
