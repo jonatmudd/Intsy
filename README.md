@@ -17,7 +17,7 @@ All feedback and suggestions are warmly welcomed.
 Above: Intsy hardware architecture and device (32/64 channel original module circa Dec 2017)
 
 
-<hr>
+
 
 <p align="center">
   <img src="SW_Intsy_screenshot.png" width="700"/>
