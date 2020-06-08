@@ -1,7 +1,7 @@
 # Intsy
 32/64/128 channel bioamplifier system, now with accelerometer and on-board SD data logging capability for ambulatory applications! Photos of the updated device are below. Also, check out the quick overview of the device internals in <a href =  "https://www.youtube.com/watch?v=RvYDtEdVOBU&feature=youtu.be">this video</a> (big props to Riwaj Shrestha, Suyash Mathema, and Jeremy Wharton!).
 
-Intsy is a new low-cost, open-source, wireless-enabled bioamplifier system.  The system can be configured for 32, 64, or 128 channel operation.  It has been validated for gastrointesinal slow wave recordings and surface EMG. Full details are provided in our <a href =  "http://iopscience.iop.org/article/10.1088/1361-6579/aaad51">recently published peer-reviewed article</a>.
+Intsy is a new low-cost, open-source, wireless-enabled bioamplifier system.  The system can be configured for 32, 64, or 128 channel operation.  It has been validated for gastrointesinal slow wave recordings and surface EMG. Full details are provided in our <a href =  "http://iopscience.iop.org/article/10.1088/1361-6579/aaad51">published peer-reviewed article in Physiological Measurement</a>.
 
 Data can be streamed either wirelessly via bluetooth or in wired configuration over USB.  A LabView interface allows for real-time visualization and saving to hard disk for off-line analysis.  Data rates of 32 chan x 110 Hz can be stably transmitted over bluetooth.  The USB wired configuration can achieve up to 2 kHz x 32 chan.  
 
