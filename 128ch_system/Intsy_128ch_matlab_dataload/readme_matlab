@@ -1,0 +1,3 @@
+matlab function and script for converting intsy binary files to matlab format.  
+start by following the example script. 
+as always, make sure you update your matlab path to include the folder into which you download these files
