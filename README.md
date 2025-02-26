@@ -11,7 +11,13 @@ Please see "Intsy_Setup_Guide.pdf" for detailed instructions on how to set up th
 
 All feedback and suggestions are warmly welcomed. 
 
-<p align="center">
+<p align="left">
+  <img src="SystemOverview_Intsy128_Panel_abcd_v2_crop.png" width="350"/>
+</p>
+Left: Intsy 128 channel electronics and mechanical enclosure (circa May 2020)
+
+
+<p align="right">
   <img src="SystemOverview_v1_300dpi.png" width="350"/>
 </p>
 Above: Intsy hardware architecture and device (32/64 channel original module circa Dec 2017)
