@@ -11,12 +11,13 @@ Please see "Intsy_Setup_Guide.pdf" for detailed instructions on how to set up th
 
 All feedback and suggestions are warmly welcomed. 
 
-<p align="left">
-  <img src="SystemOverview_Intsy128_Panel_abcd_v2_crop.png" width="500"/>
+<p align="center">
+  <img src="SystemOverview_Intsy128_Panel_abcd_v2_crop.png" width="600"/>
 </p>
 Above: Intsy 128 channel electronics and mechanical enclosure (circa May 2020)
 
 
+<p></p> <p></p>
 <p align="center">
   <img src="SystemOverview_v1_300dpi.png" width="350"/>
 </p>
@@ -28,7 +29,7 @@ Above: Intsy hardware architecture and device (32/64 channel original module cir
 <p align="center">
   <img src="SW_Intsy_screenshot.png" width="700"/>
 </p>
-Above: Screenshot of Intsy Labview front end to visualize and stream signals in real time.
+Above: Screenshot of Intsy Labview front end to visualize and stream signals in real time. The figure shows propagating gastric slow waves.
 
 
 <p></p>
