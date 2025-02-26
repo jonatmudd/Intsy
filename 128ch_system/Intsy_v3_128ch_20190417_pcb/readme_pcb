@@ -1,0 +1,5 @@
+Intsy 128 ch system pcb files.  Note this design uses Teensy 3.6, which is considered a legacy device as of 2024/25. 
+At some point in the near future, it may become strictly necessary to use a Teensy 4.1 which would necessiate minor modifications to pcb design because
+T4.1 and 3.6 and not pin-for-pin compatible (bummer).
+Namely, the SPI port pins have moved.  Also note that the firmware would need to be correspondingly updated, namely the defintions of SPI port pin numbers.
+The rest of the pcb design--and firmware--should be essentially ready to go.
