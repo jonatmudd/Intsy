@@ -1,0 +1,8 @@
+0) If the latest version of the box or lid has been modified,
+	it will have to be exported as an STL and the previous STL file
+	should either be deleted or placed in the OldVersions folder.
+	The STL file should be prefixed with 'ENGN_'.
+
+1) Open the 3d slicer program on a computer in the IQ Center.
+
+2) Drag both the box and lid STL files into the slicer and print.
