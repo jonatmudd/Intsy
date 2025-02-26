@@ -1,0 +1,9 @@
+Labview GUI files. This provides a convenient and easy way to begin data acquision and view signals in realtime
+The 'main' front end file to pen is: Intan_mainControlPanel_128ch.vi.  The remainder of .vi are subVIs.
+Note that a circular buffer library is required to handle the data queue (also included in this folder).
+
+Using the 'main control panel', the user chooses the proper port over which Intsy communicates (e.g. COM33 in the old school PC days);
+sets the 2 digit file suffix for the file name; sets the duration of the recording (which determines the block of memory allocated on the SD card). 
+Click the 'white arrow' to begin device initialization.  If successful, the big button at the buttom will illuminate green.  Click it to begin data acquision and stream signals in real time.
+
+At some point in the near future, JE will write a proper 'getting started' with labview. Feel free to ask questions in the meantime!
