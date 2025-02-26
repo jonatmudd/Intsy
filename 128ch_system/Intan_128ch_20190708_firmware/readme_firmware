@@ -1,4 +1,5 @@
-Firmware for Intsy 128 channel system.  Intsy firmware was originally developed with the Arduino IDE.  
+Firmware for Intsy 128 channel system.  Intsy firmware was originally developed with the Arduino IDE. 
+The 'main' function is: Intan_128ch_20190708.ino
 Remember to install the appropriate board and follow Teensy 'getting started instructions'. 
 Also, note that the firmware uses SDfat library from Bill Greiman. The SDfat library has been continuously updated--with at least one new major version release--since 2020.
 Thus, it is important to either download an v1.x version of the library compatible with the current firmware.  Alternatively, the code may be updated to be compatible wiht the
